@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dia da Semana</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function verificarDiaSemana() {
+			var num = parseInt(document.getElementById("num").value);
+
+			if(num >= 1 && num <= 7) {
+				var diaSemana = "";
+
+				switch(num) {
+					case 1:
+						diaSemana = "Domingo";
+						break;
+					case 2:
+						diaSemana = "Segunda-feira";
+						break;
+					case 3:
+						diaSemana = "Terça-feira";
+						break;
+					case 4:
+						diaSemana = "Quarta-feira";
+						break;
+					case 5:
+						diaSemana = "Quinta-feira";
+						break;
+					case 6:
+						diaSemana = "Sexta-feira";
+						break;
+					case 7:
+						diaSemana = "Sábado";
+						break;
+				}
+
+				document.getElementById("resultado").innerHTML = "O número " + num + " corresponde ao dia da semana " + diaSemana;
+			} else {
+				document.getElementById("resultado").innerHTML = "Não existe dia da semana com o número " + num;
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Dia da Semana</h1>
+	<label for="num">Digite um número inteiro entre 1 e 7:</label>
+	<input type="number" id="num" name="num" required>
+	<button type="button" onclick="verificarDiaSemana()">Verificar</button>
+	<p id="resultado"></p>
+</body>
+</html>
